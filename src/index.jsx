@@ -51,6 +51,8 @@ export class App extends React.Component {
   }
   
   createPost(values) {
+    this.addTemporaryFakePost(values);
+
     WpApi
       .post('wp/v2/posts')
       .send(values)
@@ -60,6 +62,21 @@ export class App extends React.Component {
         }
         this.fetchPosts();
       })
+  }
+
+  addTemporaryFakePost(postValues) {
+    var posts = this.state.posts;
+    var fakePost = {
+      id: Number.MAX_SAFE_INTEGER,
+      link: '#',
+      title: { rendered: postValues.title },
+      excerpt: { rendered: `<p>${postValues.excerpt}</p>` },
+    };
+    
+    posts.unshift(fakePost);
+    this.setState({
+      posts: posts
+    });
   }
 }
 
