@@ -14,7 +14,7 @@ function rest_plugin_admin_menu() {
     'rest_plugin_test',
     'rest_plugin_page',
     null,
-    0.001234987
+    1
   );
 }
 
