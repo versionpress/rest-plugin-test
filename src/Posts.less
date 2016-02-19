@@ -1,9 +1,29 @@
 .Posts {
+  font-family: "Open Sans",sans-serif;
+
   table {
     width: 100%;
+    border-spacing: 0;
     
     th {
       text-align: left;
+      background: #fff;
+      border-bottom: 1px solid #e1e1e1;
+      font-size: 14px;
+      padding: 8px 10px;
+    }
+
+    tbody tr {
+      &:nth-child(odd) {
+        background: #f9f9f9;
+      }
+      &:nth-child(even) {
+        background: #fff;
+      }
+
+      td {
+      	padding: 0 8px;
+      }
     }
   }
 }

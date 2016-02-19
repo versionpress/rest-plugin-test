@@ -15,7 +15,7 @@ export default class CreatePost extends React.Component {
   
   render() {
     return (
-      <div>
+      <div className='CreatePost'>
         <a href='#' onClick={this.toggleForm}>Create Post</a>
         {this.renderForm()}
       </div>
@@ -27,8 +27,14 @@ export default class CreatePost extends React.Component {
     
     return (
       <form className='CreatePost-form' onSubmit={this.onSubmit}>
-        <input type='text' name='title' placeholder='Post name' />
-        <textarea name='excerpt' placeholder='Excerpt'></textarea>
+        <label>
+          <span>Title</span>
+          <input type='text' name='title' />
+        </label>
+        <label>
+          <span>Excerpt</span>
+          <textarea name='excerpt'></textarea>
+        </label>
         <button type='submit'>Submit</button>
       </form>
     );
