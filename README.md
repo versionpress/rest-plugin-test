@@ -1,9 +1,11 @@
-# REST Plugin Test
+# WP + React + WP REST API demo
 
-Sample WordPress plugin using React and REST API.
+Sample WordPress plugin using React and WP REST API.
+
+Presented at [WordCamp Prague 2016](https://2016.prague.wordcamp.org/).
 
 
-## Usage
+## How to use
 
  - Clone this repo into `wp-content/plugins`
  - Run `npm install`
