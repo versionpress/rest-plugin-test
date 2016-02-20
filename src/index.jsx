@@ -18,15 +18,15 @@ export class App extends React.Component {
     this.fetchPosts();
   } 
 
-	render() {
-		return (
+  render() {
+    return (
       <div>
         <h1>Simple React + Wordpress REST API plugin</h1>
         <CreatePost onSubmit={this.createPost} />
         <Posts posts={this.state.posts} />
       </div>
-		);
-	}
+    );
+  }
   
   fetchPosts() {
     this.setState({ loading: true });
